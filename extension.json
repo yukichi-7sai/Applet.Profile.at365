@@ -1,0 +1,18 @@
+{
+  "apiVersion": 1,
+  "id": "at365.profile",
+  "name": "Applet.Profile.at365",
+  "displayName": "プロフィール",
+  "version": "0.1.0",
+  "minimumHostVersion": "0.69.0",
+  "description": "プロフィールの名前とアバター画像を設定します。",
+  "runtime": "node",
+  "entry": "index.cjs",
+  "capabilities": ["settings", "ribbon-items"],
+  "settings": [
+    { "key": "name", "title": "ユーザー名", "description": "プロフィールで使う名前です。リボンには表示しません。", "type": "string", "default": "ユーザー", "minLength": 1, "maxLength": 80 },
+    { "key": "avatar", "title": "アバター画像", "description": "共通の画像ライブラリーから選択します。", "type": "registered-image", "default": null }
+  ],
+  "settingSections": [{ "id": "profile", "title": "名前と画像", "settings": ["name", "avatar"] }],
+  "ribbonItems": [{ "id": "main", "title": "プロフィール", "action": "settings", "icon": "user", "imageSetting": "avatar", "imageShape": "circle", "iconOnly": true, "defaultPlacement": "bottom" }]
+}
