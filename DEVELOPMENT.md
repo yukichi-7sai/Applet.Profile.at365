@@ -13,3 +13,7 @@ Windowsと.NET 10 SDK、隣のAppDock.at365ソースが必要です。変換工�
 `publish.bat`で`A:\40.ARTIFACT\Applet.Profile.at365`へ発行する。共通pack-applet-update.ps1でupdate.zip/update.jsonを作り、既存の配置スクリプトは上書きしない。deploy.batは発行物を使い、ソースから再ビルドしない。
 
 本体の関連回帰と隔離GUIで設定・リボン・無効化を確認する。[検証記録](VERIFICATION.md)へ実行条件と結果を記録する。
+
+## 共通の運用
+
+文書構成・生成物・版更新・配布は[共通手順](../AppDock.at365/docs/development-workflow.md)、[文書方針](../AppDock.at365/docs/documentation.md)、[発行と配置](../AppDock.at365/docs/publishing.md)、[更新パッケージ](../AppDock.at365/docs/updates.md)、[生成物の整理](../AppDock.at365/DEVELOPMENT.md#作業完了時のテストフォルダー整理)を参照する。Applet固有の実行条件と結果は[検証記録](VERIFICATION.md)へ記載する。
