@@ -10,5 +10,4 @@ foreach ($taskFile in @('extension.json', 'index.cjs')) {
 }
 & (Join-Path $taskRoot '..\AppDock.at365\scripts\pack-applet-update.ps1') -SourceDirectory $taskDestination -OutputDirectory $taskOutput
 if (-not $?) { throw 'Applet update packaging failed.' }
-Install-PublishedDeployment $taskRoot $taskOutput
 Write-Host "Published: $taskOutput"
