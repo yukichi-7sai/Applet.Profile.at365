@@ -1,5 +1,12 @@
 # 検証記録
 
+## 2026-11-03 更新リポジトリの宣言（0.1.2）
+
+- コミット前に配布フォルダーとZIPの全2ファイル、ソースmanifest、feedのサイズ・SHA256を再照合した。実装時の固定EXE・導入済み除外の成功記録と一致した。照合結果は本体 `.artifacts/commit-validation-catalog-cache-01270/applets.json`。
+
+- `extension.json` に `updateRepository: yukichi-7sai/Applet.Profile.at365` を追加した。既存のmanifest項目を使う配布メタデータの変更としてパッチ更新した。
+- 通常発行が成功。ソース、発行フォルダー、update.zip内のmanifestのID・版・更新元、feedとZIPのサイズ・SHA256が一致した。AppDock 0.127.0の固定EXEで同じ更新元を宣言した停止中Appletを取得前に除外した。証跡は本体の `.artifacts/catalog-cache-01270/applets-verified.json` と fixed-result.json。GitHub匿名APIは使用していない。
+
 ## 2026-11-02 Applet共通実行場所のコミット前照合
 
 - 利用者の受け入れとコミット依頼を受け、今回のテスト基盤/開発文書2ファイルをコミット対象として再確認した。文書だけの変更として、ローカル参照・UTF-8・差分を確認した。製品回帰の追加実行は対象外。
