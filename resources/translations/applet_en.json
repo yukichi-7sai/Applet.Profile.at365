@@ -1,0 +1,11 @@
+{
+  "applet.description": "Set your profile name and avatar image.",
+  "applet.displayName": "Profile",
+  "applet.tagline": "Make it yours with a name and avatar.",
+  "ribbon.main.title": "Profile",
+  "settings.avatar.description": "Choose an image from the shared image library.",
+  "settings.avatar.title": "Avatar image",
+  "settings.name.description": "The name used for your profile. It is not shown on the ribbon.",
+  "settings.name.title": "User name",
+  "settings.profile.title": "Name and image"
+}

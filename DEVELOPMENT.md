@@ -8,11 +8,17 @@ Nodeのactivate/deactivateは空でよい。設定値と有効状態からのリ
 
 ## ビルド・発行
 
-Windowsと.NET 10 SDK、隣のAppDock.at365ソースが必要です。変換工程はなく、repo直下で`publish.bat`を実行してindex.cjsとextension.jsonを梱包します。
+Windowsと.NET 10 SDK、隣のAppDock.at365ソースが必要です。変換工程はなく、repo直下で`publish.bat`を実行してindex.cjs・extension.json・resourcesを梱包します。
 
 `publish.bat`で`A:\40.ARTIFACT\Applet.Profile.at365`へ発行する。共通pack-applet-update.ps1でupdate.zip/update.jsonを作る。実利用先へ配置する場合はAppDockを完全終了し、発行した`extensions/at365.profile`を配置先の同名フォルダーへコピーする。
 
 本体の関連回帰と隔離GUIで設定・リボン・無効化を確認する。[検証記録](VERIFICATION.md)へ実行条件と結果を記録する。
+
+## 翻訳
+
+[Appletの翻訳基盤](../AppDock.at365/docs/applet-localization.md)を使用する。日本語の基本辞書は`resources/translations/applet.json`、英語辞書は`applet_en.json`。manifestの表示文言を翻訳参照にし、言語変更時の更新は本体に委ねる。表示名とリボン名は日英とも`Profile`。保存する名前・画像参照・設定ID・既定の名前は翻訳しない。
+
+本体をビルド済みの状態で、本体の`dev.bat exec node --test ../Applet.Profile.at365/tests/*.test.cjs`を実行する。GUIは`dev.bat exec node ../Applet.Profile.at365/scripts/test-localization-ui.cjs <本体EXE> [Applet配布フォルダー]`で、発行済み本体と指定したAppletを隔離profileへ読み込む。Appletフォルダー省略時はこのrepoを使う。
 
 ## 共通の運用
 

@@ -1,0 +1,11 @@
+{
+  "applet.description": "プロフィールの名前とアバター画像を設定します。",
+  "applet.displayName": "Profile",
+  "applet.tagline": "名前とアバターで、自分らしく。",
+  "ribbon.main.title": "Profile",
+  "settings.avatar.description": "共通の画像ライブラリーから選択します。",
+  "settings.avatar.title": "アバター画像",
+  "settings.name.description": "プロフィールで使う名前です。リボンには表示しません。",
+  "settings.name.title": "ユーザー名",
+  "settings.profile.title": "名前と画像"
+}

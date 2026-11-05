@@ -2,20 +2,21 @@
   "apiVersion": 1,
   "id": "at365.profile",
   "name": "Applet.Profile.at365",
-  "displayName": "Profile",
+  "displayName": "%applet.displayName%",
   "icon": "user",
-  "tagline": "名前とアバターで、自分らしく。",
-  "version": "0.1.3",
+  "tagline": "%applet.tagline%",
+  "version": "0.2.0",
   "updateRepository": "yukichi-7sai/Applet.Profile.at365",
-  "minimumHostVersion": "0.69.0",
-  "description": "プロフィールの名前とアバター画像を設定します。",
+  "minimumHostVersion": "0.159.0",
+  "localization": { "defaultLanguage": "ja" },
+  "description": "%applet.description%",
   "runtime": "node",
   "entry": "index.cjs",
   "capabilities": ["settings", "ribbon-items"],
   "settings": [
-    { "key": "name", "title": "ユーザー名", "description": "プロフィールで使う名前です。リボンには表示しません。", "type": "string", "default": "ユーザー", "minLength": 1, "maxLength": 80 },
-    { "key": "avatar", "title": "アバター画像", "description": "共通の画像ライブラリーから選択します。", "type": "registered-image", "default": null }
+    { "key": "name", "title": "%settings.name.title%", "description": "%settings.name.description%", "type": "string", "default": "ユーザー", "minLength": 1, "maxLength": 80 },
+    { "key": "avatar", "title": "%settings.avatar.title%", "description": "%settings.avatar.description%", "type": "registered-image", "default": null }
   ],
-  "settingSections": [{ "id": "profile", "title": "名前と画像", "settings": ["name", "avatar"] }],
-  "ribbonItems": [{ "id": "main", "title": "Profile", "action": "settings", "icon": "user", "imageSetting": "avatar", "imageShape": "circle", "iconOnly": true, "defaultPlacement": "bottom" }]
+  "settingSections": [{ "id": "profile", "title": "%settings.profile.title%", "settings": ["name", "avatar"] }],
+  "ribbonItems": [{ "id": "main", "title": "%ribbon.main.title%", "action": "settings", "icon": "user", "imageSetting": "avatar", "imageShape": "circle", "iconOnly": true, "defaultPlacement": "bottom" }]
 }

@@ -8,6 +8,7 @@ New-Item -ItemType Directory -Path $taskDestination -Force | Out-Null
 foreach ($taskFile in @('extension.json', 'index.cjs')) {
     Copy-Item -LiteralPath (Join-Path $taskRoot $taskFile) -Destination (Join-Path $taskDestination $taskFile) -Force
 }
+Copy-Item -LiteralPath (Join-Path $taskRoot 'resources') -Destination $taskDestination -Recurse -Force
 & (Join-Path $taskRoot '..\AppDock.at365\scripts\pack-applet-update.ps1') -SourceDirectory $taskDestination -OutputDirectory $taskOutput
 if (-not $?) { throw 'Applet update packaging failed.' }
 Write-Host "Published: $taskOutput"
