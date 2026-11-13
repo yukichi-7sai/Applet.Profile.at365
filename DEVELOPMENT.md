@@ -10,7 +10,7 @@ Nodeのactivate/deactivateは空でよい。設定値と有効状態からのリ
 
 Windowsと.NET 10 SDK、隣のAppDock.at365ソースが必要です。変換工程はなく、repo直下で`publish.bat`を実行してindex.cjs・extension.json・resourcesを梱包します。
 
-`publish.bat`で`A:\40.ARTIFACT\Applet.Profile.at365`へ発行する。共通pack-applet-update.ps1でupdate.zip/update.jsonを作る。実利用先へ配置する場合はAppDockを完全終了し、発行した`extensions/at365.profile`を配置先の同名フォルダーへコピーする。
+`publish.bat`で`.artifacts/publish`へ発行する。共通pack-applet-update.ps1でupdate.zip/update.jsonを作る。実利用先へ配置する場合はAppDockを完全終了し、発行した`extensions/at365.profile`を配置先の同名フォルダーへコピーする。
 
 本体の関連回帰と隔離GUIで設定・リボン・無効化を確認する。[検証記録](VERIFICATION.md)へ実行条件と結果を記録する。
 
